@@ -1,0 +1,58 @@
+@import "common_style.css";
+
+/*================MAIN=========== */
+
+main {
+    max-width: 1024px;
+    margin: auto;
+    background-color: #fff;
+    border-top: 1px solid #f1f7fb;
+    border-bottom: 1px solid #f1f7fb;
+}
+.galleryHeader {
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 32px;
+    font-weight: 200;
+    margin: 97px 61px 47px 61px;
+    text-transform: uppercase;
+    color: #263555;
+}
+.galleryImages {
+    width: 902px;
+    height: 542px;
+    margin: 0 61px 140px 61px;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* ----------ПОЛЕ КАРТИНОК----------- */
+.galleryImages > div {
+    position: relative;
+    width: 288px;
+    height: 155px;
+}
+.galleryImages img {
+    width: 288px;
+    height: 155px;
+}
+
+/* ------------ZOOM------------- */
+.image > .zoom {
+    display: none;
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+    background-image: url(../img/gallery_img/zoom_icon.png);
+    background-size: contain;
+}
+.galleryImages > div:hover > .zoom {
+    display: block;  
+}
+.galleryImages > div:hover a {
+    filter: brightness(0.5);  
+}

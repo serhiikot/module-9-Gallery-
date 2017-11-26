@@ -1,0 +1,282 @@
+:root {
+    --main-max-width: 1024px;
+    --main-font-color: #263555;
+}
+@font-face{
+    font-family: "ArialRegular";
+    src: url("../fonts/ArialRegular.eot") format("eot");
+    src: url("../fonts/ArialRegular.ttf") format("ttf");    
+    src: url("../fonts/WebFont.woff") format("woff");
+}
+body {
+    position: relative;
+    background-image: url(../img/bg_sky.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+}
+.wrapper {
+    position: relative;
+    max-width: var(--main-max-width);
+    margin: auto;  
+}
+/* ===================HEADER========= */
+header {
+    max-width: var(--main-max-width);
+    height: 235px;
+    margin: auto;
+}
+/* -------------ЛОГОТИП-------------- */
+.logo {
+    width: 138px;
+    height: 138px;      
+    border-radius: 75px;
+    background-color: #fff;
+    list-style: none;
+}
+.logoTxt {
+    margin: 0;
+}
+.logoTxt > a {
+    font-family: 'Dorsa', sans-serif;
+    display: block;
+    font-size: 60px;    
+    font-weight: 300;
+    text-align: center;
+    line-height: 138px;
+    text-transform: uppercase; 
+    text-decoration: none;
+    color: var(--main-font-color);   
+}
+
+
+/* ----------------ВЕРХНЕЕ МЕНЮ------------- */
+nav {
+    position: relative;
+    display: flex;
+    padding: 0 90px 0 90px;
+    max-width: 100%;
+    height: 235px;
+    margin: auto;
+}
+.topMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+}
+.topDropMenuItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    list-style: none;
+}
+.topMenuItemDrop,
+.topMenuItem {
+    position: relative;    /*для абсолютного позиц-ия выпадающего меню */
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 28px;
+    text-transform: uppercase;
+    list-style: none;
+    color: #fff;
+}
+.topMenuItemDrop {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.topMenuItemDrop > a,
+.topMenuItem > a {
+    text-decoration: none;
+    color: #fff;
+}
+.topMenuItem > a:hover,
+.topMenuItemDrop > a:hover {
+    color: var(--main-font-color); 
+}
+/* ----------------ВСПЛЫВАЮЩЕЕ МЕНЮ-------------- */
+.topDropMenu {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    width: 66px;
+    height: 84px;
+    top: 50px;
+    left: -6px;
+    padding-left: 0;
+    background-color: #fff;
+    border-radius: 2px;
+}
+.topDropMenu:before {
+    content: "";
+    position: absolute;
+    display: none;
+    width: 0;
+    height: 0;
+    top: -3px;
+    left: 31px;
+    border-style: solid;
+    border-width: 0 2.5px 3px 2.5px;
+    border-color: transparent transparent #fff transparent;
+}
+.topMenuItemDrop:hover > .topDropMenu {
+    visibility: visible; 
+}
+.topMenuItemDrop:hover > .topDropMenu:before {
+    display: inline-block;
+}
+.topDropMenuItem > a {
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 20px; 
+    text-decoration: none;
+    color: #6b7488;
+}
+.topDropMenuItem > a:hover {
+    text-decoration: underline;
+}
+
+/*================FOOTER=========== */
+footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: var(--main-max-width);
+    height: 133px;
+    margin: auto;
+    background-color: #30455b;
+}
+
+/* ----------FOOTER LINKS-------- */
+.footerLinks {
+    width: 180px;
+    padding: 0;
+    list-style: none;
+}
+.footerLinks a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 2;
+    color: #fff;
+}
+/* --------CONTACTS--------- */
+.contacts {
+    width: 180px;
+    height: 65px;
+    line-height: 1.7;
+    color: #fff;
+}
+.contacts > h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin: 0;
+}
+.contacts > p {
+    font-family: 'ArialRegular', sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+    margin: 0;
+    text-decoration: none;
+}
+.contacts a  {
+    font-family: 'ArialRegular', sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+    margin: 0;
+    text-decoration: none;
+    color: #fff;
+}
+/* -----------SOCIAL LINKS---------- */
+.socialLinks {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 198px;
+    bottom: -65px;
+    left: 50%;
+    transform: translateX( -50%);
+    overflow: hidden;
+    font-size: 0;
+    padding: 0;
+}
+.socialLinks a {
+    display: block;
+    width: 40px; 
+    height: 40px;
+    background-image: url(../img/social_icons.png);
+    background-repeat: no-repeat;
+}
+.bgTwitter {
+    background-position: -1px -1px;
+}
+.bgFacebook {
+    background-position: -43px -1px;
+}
+.bgGoogle {
+    background-position: -85px -1px;
+}
+.bgIn {
+    background-position: -127px -1px;
+}
+.socialLinks a:hover {
+    transform: scale( 0.9);
+}
+
+/* ---------------COPY RIGHTS-------------- */
+.copyRights {
+    position: absolute;
+    bottom: -126px;
+    left: 50%;
+    transform: translateX( -50%);
+    margin: auto;
+    height: 61px;
+    text-align: center; 
+}
+.copyRights > p {
+    font-family: "ArialRegular", sans-serif;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    margin: 24px 0 24px 0;   
+}
+
+/* =============КНОПКА НА НАЧАЛО ЭКРАНА========== */
+
+.goTopButton {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    bottom: 22px;
+    right: 252px;
+    border-radius: 15px;
+    background-color: #38afe5;
+    border: none;
+    z-index: 5;
+}
+.goTopButton > a {
+    display: block;
+}
+.goTopArrow {
+    margin: 0;
+    text-align: center;
+    line-height: 30px;
+    vertical-align: top;
+    color: #fff; 
+    transform: scale(1.5, 0.7);
+    text-decoration: none;
+}
